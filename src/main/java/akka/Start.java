@@ -4,6 +4,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import atores.EcoActor;
+import modelos.MensagemAkka;
 
 public class Start {
 		
@@ -22,7 +23,7 @@ public class Start {
 
 	    // Enviando a mensagem ao ator
 	    //como não é um ator enviando a mensagem, passamos o noSender().
-	    ator.tell("Oi Mundo com Atores", ActorRef.noSender());
+	    ator.tell(new MensagemAkka(), ActorRef.noSender());
 	    
 	}
 	
